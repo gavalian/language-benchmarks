@@ -5,12 +5,21 @@ languages. The test contains mix of things including compiled
 languages, interpreted languages and scripting laguages.
 The purpose is to have a clear understanding of advantages
 and diadvantaged of using one or the other language for data
-analysis. There is prevailing opinion (belief, faith) in our
+analysis. 
+
+There is prevailing opinion (belief, faith mostly held by people who never used Java) in our
 collaboration that Java is 15 times slower than C++. This
 might have been true 20 years ago, but Java compilers and
 interpreters came a long way to optimize and speed up the code.
-We wanted to test all popular solutions in our field (Nuclear
-Physics) to get som insight if those believes are true or false.
+We wanted to test all popular languages in our field (Nuclear
+Physics) to get some insight if those believes are true or false.
+Hopefully this benchmarks will be useful for some users when considering one or another
+language for their daily use.
+
+*Disclaimer: I (author of this repository) do not consider myself a C++ expert.
+Neither do I consider myself expert in any particular language. So before critisizing 
+any of the codes in this repository, please feel free to edit/modify any of the
+codes and benchmarks. Users are encouraged to form their own opinions, different from the author's.*
 
 ## Benchmarking different languages (simple calculations)
 
