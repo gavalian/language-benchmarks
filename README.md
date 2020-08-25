@@ -39,8 +39,18 @@ Simple pi value calculations using monte carlo method:
  ('PYTHON : pi value = ', 3.14170084, '  time (sec) = ', 47.20268702507019)
 
 ```
+The unexpected result of this benchmark was how slow is python for simple calculations.
+The authors are aware that this is not real benchmark of pythons ability to crunch numbers
+but they did not know how to use numpy for this simple example. The python benchmark is 
+removed from the reults graph since it makes all other results to look very small.
 
 ![Benchmark for PI calculation](results/piBenchmarkResult.png?raw=true "Title")
+
+As can be seen from the plot, Java performs better for this task. The C++ codes were run
+once to get the time (in the future we will include in the code, running several times and
+taking the average), as for Java, the code runs the calculation 3 times in the silent mode
+as a warmup for JIT to kick in, then a run is made to measure excution time.
+
 
 ## Benchmarking Map evaluations
 
