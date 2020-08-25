@@ -9,10 +9,11 @@ int main(){
   int nThrows = 0;
   int nSuccess = 0;
 
+  double factor = 1.0/( (double) RAND_MAX);
   auto start = std::chrono::high_resolution_clock::now();
   for(int i = 0; i < events; i++){
-    x = rand()/((double)RAND_MAX);
-    y = rand()/ ((double) RAND_MAX);
+    x = rand()*factor;
+    y = rand()*factor;
     nThrows++;
     if( x*x + y*y <= 1.0) nSuccess++;
   }
