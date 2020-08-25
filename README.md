@@ -12,10 +12,10 @@ interpreters came a long way to optimize and speed up the code.
 We wanted to test all popular solutions in our field (Nuclear
 Physics) to get som insight if those believes are true or false.
 
-Disclaimer: I (author of this repository) do not consider myself a C++ expert.
+*Disclaimer: I (author of this repository) do not consider myself a C++ expert.
 Neither I consider myself expert in any particular language. So before critisizing 
 any of the codes in this repository, please feel free to edit/modify any of the
-codes and benchmarks.
+codes and benchmarks.*
 
 ## Benchmarking different languages (simple calculations)
 
