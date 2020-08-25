@@ -57,7 +57,34 @@ and testing the standard libraries of each language.
 
 ## Benchmarking Analysis
 
+This tests are designed to be similar to the analysis we do in nuclear physics. Experimental
+data was used where two objects are present in the file, one with particles detected in each event
+and the second object is detector response to the particle (i.e. electromagnetic calorimeter).
+First we create a a map that stores indecies of particles that each calorimeter hit refers to:
+
+```c++
+ std::map<int, std::vector<int>> reference;
+```
+
+and then we compute deposited energy in calorimeter for each neutrally charged particle 
+and compute sampling fraction (i.e. momentum divided by energy) and count how many particles
+we have with sf > 1.0. The results of the analysis in different languages shown below.
+
 ![Benchmark for Analysis](results/anaBenchmarkResult.png?raw=true "Analysis Benchmark")
 
+In the benchmark the I/O and analysis times are measured separately, in case of C++ code (without -O2
+optimization) the I/O library is compiled with "O2" optimization, only the analysis code is not optimized.
+As can be seen from the results C++, Java and JShell perform the same (analysis part), Java is slightly 
+(~10%) faster than C++ optimized code. Grovvy is slower than Java as far as computations go, the I/O
+is not much slower since compiled Java code is used to do the I/O.
+
+
+## Conclusion
+
+We tested performance of several languages to assess their usability as data analysis medium. From the
+benchmarks it is apparent that modern Java is not significantly slower than C++ (well defenetly not 15 times as
+my collegues claim)., and it comes with several options for rapid code testing and scripting. Groovy is somewhat 
+slower, but very useful tool to test out workflows. JShell (comes with JDK) provides similar speed to Java 
+compiled code, and can be used to test code and compine functionality to make a workflow.
 
 
