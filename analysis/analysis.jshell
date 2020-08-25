@@ -5,12 +5,14 @@ import org.jlab.jnp.utils.benchmark.*;
 import org.jlab.jnp.physics.*;
 
 
-public class AnaBench {
 
-public static void run(String dataFile){
+String dataFile = "/Users/gavalian/Work/DataSpace/clas12/test_7.hipo";
 HipoReader reader = new HipoReader();
 
 reader.open(dataFile);
+BenchmarkTimer ttimer = new BenchmarkTimer("total");
+
+ttimer.resume();
 
 Event      event  = new Event();
 Bank       particle   = new Bank(reader.getSchemaFactory().getSchema("REC::Particle"));
@@ -29,7 +31,7 @@ int counterSf_lt_One = 0;
 int c1 = 0;
 int c2 = 0;
 int c3 = 0;
-//while(reader.hasNext()==true&&counter<50000){
+
 while(reader.hasNext()==true){
 
   reader.nextEvent(event);
@@ -79,15 +81,11 @@ while(reader.hasNext()==true){
 
   counter++;
 }
-
+ttimer.pause();
 System.out.println("processed counter = " + counter + " sf ratio " + counterSf_gt_One + " / " + counterSf_lt_One);
 System.out.printf(" c1 / c2 / c3 = %d / %d /%d \n",c1,c2,c3);
+System.out.println(ttimer);
 System.out.println(btimer);
 
-}
-}
 
-dataFile = args[0];
-for(int i = 0; i < 5; i++){
-AnaBench.run(dataFile);
-}
+
