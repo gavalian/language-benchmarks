@@ -44,13 +44,16 @@ The authors are aware that this is not real benchmark of pythons ability to crun
 but they did not know how to use numpy for this simple example. The python benchmark is 
 removed from the reults graph since it makes all other results to look very small.
 
-![Benchmark for PI calculation](results/piBenchmarkResult.png?raw=true "Title")
+![Benchmark for PI calculation](results/piBenchmarkResult.png?raw=true "PI Monte-Carlo Benchmark")
 
-As can be seen from the plot, Java performs better for this task. The C++ codes were run
+As can be seen from the plot, Java performs better for this task than C++. The C++ codes were run
 once to get the time (in the future we will include in the code, running several times and
 taking the average), as for Java, the code runs the calculation 3 times in the silent mode
 as a warmup for JIT to kick in, then a run is made to measure excution time.
 
+However, this is just a test of how simple computations compare in each language, the next stage
+is to test ability of object orianted languages to deal with heavy object creation and destruction
+and testing the standard libraries of each language.
 
 ## Benchmarking Map evaluations
 
