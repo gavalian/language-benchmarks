@@ -40,5 +40,7 @@ Simple pi value calculations using monte carlo method:
 
 ```
 
+![Benchmark for PI calculation](results/piBenchmarkResult.png?raw=true "Title")
+
 ## Benchmarking Map evaluations
 
