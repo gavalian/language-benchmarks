@@ -1,4 +1,18 @@
-# Benchmarking different languages
+# Introduction
+
+This repository was set up to test performance of different
+languages. The test contains mix of things including compiled
+languages, interpreted languages and scripting laguages.
+The purpose is to have a clear understanding of advantages
+and diadvantaged of using one or the other language for data
+analysis. There is prevailing opinion (belief, faith) in our
+collaboration that Java is 15 times slower than C++. This
+might have been true 20 years ago, but Java compilers and
+interpreters came a long way to optimize and speed up the code.
+We wanted to test all popular solutions in our field (Nuclear
+Physics) to get som insight if those believes are true or false.
+
+## Benchmarking different languages (simple calculations)
 
 To run examples go the the appropriate folder and
 type "sh run_all.sh". In order to run all the tests
@@ -17,5 +31,5 @@ Simple pi value calculations using monte carlo method:
 
 ```
 
-#Benchmarking Map evaluations
+## Benchmarking Map evaluations
 
