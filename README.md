@@ -55,5 +55,9 @@ However, this is just a test of how simple computations compare in each language
 is to test ability of object orianted languages to deal with heavy object creation and destruction
 and testing the standard libraries of each language.
 
-## Benchmarking Map evaluations
+## Benchmarking Analysis
+
+![Benchmark for Analysis](results/anaBenchmarkResult.png?raw=true "Analysis Benchmark")
+
+
 
