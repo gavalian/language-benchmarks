@@ -40,6 +40,7 @@ Simple pi value calculations using monte carlo method:
  ('PYTHON : pi value = ', 3.14170084, '  time (sec) = ', 47.20268702507019)
 
 ```
+
 The unexpected result of this benchmark was how slow is python for simple calculations.
 The authors are aware that this is not real benchmark of pythons ability to crunch numbers
 but they did not know how to use numpy for this simple example. The python benchmark is 
@@ -55,6 +56,24 @@ as a warmup for JIT to kick in, then a run is made to measure excution time.
 However, this is just a test of how simple computations compare in each language, the next stage
 is to test ability of object orianted languages to deal with heavy object creation and destruction
 and testing the standard libraries of each language.
+
+Fortran benchmark is the most unexpected one, Fortran is claimed to be the fastest language for math
+and yet, Java outperforms in this test. To try Fortran benchmark compile and run the code "pimc/benchmark.F".
+I did not know how to measure time inside the fortran code, so the time was measured with unix "time" command.
+
+```bash
+> gfortran -O2 benchmark.F
+> time ./a.out
+```
+
+** Output **
+
+```bash
+throw =    100000000  success =     78535970
+FORTRAN : pi =    3.14143872      time =    0.00000000
+1.650u 0.002s 0:01.65 100.0%	0+0k 0+0io 0pf+0w
+```
+
 
 ## Benchmarking Analysis
 
