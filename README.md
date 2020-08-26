@@ -66,7 +66,7 @@ I did not know how to measure time inside the fortran code, so the time was meas
 > time ./a.out
 ```
 
-** Output **
+**Output:**
 
 ```bash
 throw =    100000000  success =     78535970
