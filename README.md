@@ -36,6 +36,7 @@ Simple pi value calculations using monte carlo method:
  C++    : pi value =  3.141698 time (sec) = 1.4741
  JAVA   : pi value =  3.141518 time (sec) = 1.2111
  GROOVY : pi value =  3.141373 time (sec) = 1.4722
+ FORTRAN: pi value =  3.141438 time (sec) = 1.6500 
  ('PYTHON : pi value = ', 3.14170084, '  time (sec) = ', 47.20268702507019)
 
 ```
