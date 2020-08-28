@@ -97,7 +97,10 @@ optimization) the I/O library is compiled with "O2" optimization, only the analy
 As can be seen from the results C++, Java and JShell perform the same (analysis part), Java is slightly 
 (~10%) faster than C++ optimized code. Grovvy is slower than Java as far as computations go, the I/O
 is not much slower since compiled Java code is used to do the I/O.
-
+It is worth mentioning that I/O libraries that are used in Java are old implementation of LZ4 compression
+library, that have been updated in the past years with significant speed improvements. The I/O library
+is in process of migrating to new versions which will speed up the I/O and match the speed provided by C++
+(after all, the Java I/O is using the "c" code through JNI, and it provides the same speed). 
 
 ## Conclusion
 
