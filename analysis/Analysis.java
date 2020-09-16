@@ -26,6 +26,8 @@ public static void run(String dataFile){
   Vector3 vec = new Vector3();
 
   BenchmarkTimer btimer = new BenchmarkTimer("operation");
+  BenchmarkTimer ttimer = new BenchmarkTimer("total");
+  BenchmarkTimer rtimer = new BenchmarkTimer("read");
 
 
   int counterSf_gt_One = 0;
@@ -34,12 +36,13 @@ public static void run(String dataFile){
   int c2 = 0;
   int c3 = 0;
   int counter = 0;
+  ttimer.resume();
   while(reader.hasNext()==true){
-
+      rtimer.resume();
     reader.nextEvent(event);
     event.read(particle);
     event.read(detector);
-
+    rtimer.pause();
     int nrows_d = detector.getRows();
     response.clear();
     btimer.resume();
@@ -82,10 +85,12 @@ public static void run(String dataFile){
 
   counter++;
 }
-
+  ttimer.pause();
 System.out.println("processed counter = " + counter + " sf ratio " + counterSf_gt_One + " / " + counterSf_lt_One);
 System.out.printf(" c1 / c2 / c3 = %d / %d /%d \n",c1,c2,c3);
 System.out.println(btimer);
+System.out.println(rtimer);
+System.out.println(ttimer);
 
 }
 
