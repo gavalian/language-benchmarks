@@ -9,7 +9,7 @@ root -l -b -q benchmark.C
 ./a.out.o2
 java -cp . Benchmark
 groovy benchmark.groovy
-python benchmark.py
+python3 benchmark.py
 
 rm -rf *class a.out*
 
